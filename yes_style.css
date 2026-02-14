@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f172a, #111827);
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.letter-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.letter {
+    background: #f8d7da;
+    color: #1e293b;
+    max-width: 750px;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+    line-height: 1.9;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Garis pembatas kiri kanan */
+.letter::before,
+.letter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #fda4af;
+}
+
+.letter::before {
+    left: 0;
+}
+
+.letter::after {
+    right: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e11d48;
+}
+
+.signature {
+    margin-top: 40px;
+    text-align: right;
+    font-style: italic;
+}

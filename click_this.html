@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beneran Mau Lanjut?</title>
+    <link rel="stylesheet" href="styleclick.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Kamu yakin mau baca semuanya?</h2>
+    <p>Pelan-pelan ya bacanya...</p>
+
+    <div class="button-area">
+        <button id="yesBtn" onclick="yesPage()">Iya</button>
+        <button id="noBtn" onclick="growYes()">Enggak</button>
+    </div>
+</div>
+
+<script>
+let size = 1;
+
+function growYes() {
+    size += 0.3;
+
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    yesBtn.style.transform = `scale(${size})`;
+
+    // NO makin menjauh
+    noBtn.style.transform = `translateY(${size * 20}px)`;
+    noBtn.style.opacity = 1 - (size / 5);
+}
+
+function yesPage() {
+    window.location.href = "yes_page.html";
+}
+</script>
+
+</body>
+</html>
